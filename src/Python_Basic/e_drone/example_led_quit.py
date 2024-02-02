@@ -3,8 +3,8 @@ from e_drone.drone import *
 from e_drone.protocol import *
 
 def user_input():
-    user_input = input("Enter a command: ")
-    if user_input == "q":
+    user_input = input()
+    if user_input == "q" or user_input == "Q":
         return True
 
 if __name__ == '__main__':
@@ -13,7 +13,7 @@ if __name__ == '__main__':
     while True:
         if user_input():
             break
-        drone.sendLightDefaultColor(LightModeDrone.BodyFlickerDouble, 1, 255, 0, 0) # Red
+        drone.sendLightDefaultColor(LightModeDrone.BodyDimming, 1, 255, 0, 0) # Red
         sleep(2)
         drone.sendLightDefaultColor(LightModeDrone.BodyDimming, 1, 0, 255, 0) # Green
         sleep(2)
