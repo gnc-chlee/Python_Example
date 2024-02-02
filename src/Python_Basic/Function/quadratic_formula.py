@@ -17,7 +17,7 @@ def quadratic_formula(a, b, c):
 
 # 예제: x^2 - 5x + 6 = 0
 a = 1
-b = -5
+b = 3
 c = 6
 
 roots = quadratic_formula(a, b, c)

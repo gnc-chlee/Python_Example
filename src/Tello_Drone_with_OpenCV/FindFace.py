@@ -17,7 +17,7 @@ pid = [0.4, 0.2, 0]         # P I D
 pError = 0
 
 def findFace(img):
-    faceCascade = cv2.CascadeClassifier("haarcascade_frontalface_alt.xml")
+    faceCascade = cv2.CascadeClassifier(cv2.data.haarcascades + "haarcascade_frontalface_alt.xml")
     imgGray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
     faces = faceCascade.detectMultiScale(imgGray, 1.2, 8)
 
