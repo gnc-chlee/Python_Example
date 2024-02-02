@@ -13,4 +13,3 @@ if __name__ == '__main__':
         dataArray = drone.sendLightDefaultColor(LightModeDrone.BodyDimming, 1, r, g, b) # Red
         print(print(f" {i} / {convertByteArrayToString(dataArray)}"))
         sleep(2)
-        drone.close()
