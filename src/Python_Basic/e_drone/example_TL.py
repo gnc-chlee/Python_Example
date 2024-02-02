@@ -13,13 +13,18 @@ if __name__ == '__main__':
     drone.sendTakeOff()
     sleep(3)
 
-    print("Moving forward")
-    drone.sendControlPosition(2,0,0,0.5,0,0)
-    sleep(10)
-
-    print("Moving up")
-    drone.sendControlPosition(0,0,0.5,0.5,0,0)
+    drone.sendControlPosition(0,0,1,0.5,0,0)
     sleep(5)
+
+    drone.sendControlWhile(0,0,0,30,1000)
+    sleep(5)
+    # print("Moving forward")
+    # drone.sendControlPosition(2,0,0,0.5,0,0)
+    # sleep(10)
+
+    # print("Moving up")
+    # drone.sendControlPosition(0,0,0.5,0.5,0,0)
+    # sleep(5)
 
     print("Landing")
     drone.sendLanding()

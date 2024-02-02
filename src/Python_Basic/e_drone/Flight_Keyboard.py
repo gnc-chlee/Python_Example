@@ -9,8 +9,7 @@ import keyboard
 if __name__ == '__main__':
 
     drone = Drone()
-    drone.open()
-    count = 0
+    drone.open("com4")
     while 1:
         if keyboard.is_pressed("1"):
             print("TakeOff")
@@ -25,11 +24,11 @@ if __name__ == '__main__':
         
         if keyboard.is_pressed("w") or keyboard.is_pressed("W"):
             print("Go Front")
-            drone.sendControl(0, 20, 0, 0)
+            drone.sendControl(0, 30, 0, 0)
             sleep(0.1)
         elif keyboard.is_pressed("s") or keyboard.is_pressed("S"):
             print("Go Back")
-            drone.sendControl(0, -20, 0, 0)
+            drone.sendControl(0, -30, 0, 0)
             sleep(0.1)
 
         if keyboard.is_pressed("a") or keyboard.is_pressed("A"):
