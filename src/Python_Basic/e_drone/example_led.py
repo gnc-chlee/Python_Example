@@ -3,7 +3,7 @@ from e_drone.drone import *
 from e_drone.protocol import *
 
 def exit():
-    input_command = input("Press Enter to exit...")
+    input_command = input("Press q and enter to exit...")
     if input_command == "q" or input_command == "Q":
         drone.close()
         print("Program Exit")

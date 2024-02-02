@@ -19,3 +19,6 @@ if __name__ == '__main__':
 
     drone.close()
     print("Finish")
+
+    # drone.sendControlPosition(0, 0, 0, 0, 0, 0)  # xpos, ypos, zpos, velocity heading rot_vel
+    # drone.sendControlWhile(0, 0, 0, 0, 1000)  # roll, pitch, yaw, zpos, time[ms]
